@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LicencedMediaStore - Decentralized Ethereum App for Media</title>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
+</head>
+<body>
+
+  <br>
+  <h1>LicencedMediaStore</h1>
+  <br><label for="account_id">Account ID:</label><input type="text" id="account_id" placeholder="e.g., 95" value = "0"></input>
+  <br><button id="submit_account_id" onclick="refreshApp()">Go</button>
+  <br><p id="account_type"></p>
+  <br><label for="my_address">My Address:</label><span id="my_address"></span>
+  <br><label for="my_balance">My Balance:</label><span id="my_balance"></span>
+  <br><br>
+
+  <h2>Available Media Items</h2>
+  <table id="media_list">
+    <tr>
+      <th>Media ID</th>
+      <th>Description</th> 
+      <th>Price Individual</th>
+      <th>Price for Company</th>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <br><label for="media_id">My Address:</label><input type="number" min="0" id="media_id" placeholder="e.g., 1"></input>
+  <br><button id = "buy_media">Click to buy</button>
+
+  <br><br>
+
+  <h2>Purchased Media Items</h2>
+  <table id="purchased_media_list">
+    <tr>
+      <th>Media ID</th>
+      <th>Description</th> 
+      <th>License Type</th>
+      <th>URL</th>
+    </tr>
+  </table>
+
+  <br><br>
+  <div id="new_media">
+    <h2>Add New Media</h2>
+
+    <br><label for="new_media_description" >Description</label><input id="new_media_description" type="text">
+
+    <br><label for="new_media_price_individual" >Price Individual</label><input id="new_media_price_company" type="text">
+
+    <br><label for="new_media_price_company" >Price for Company</label><input id="new_media_price_company" type="text">
+    <br>
+    <button id="add_new_stakeholder">Add New Stakeholder</button>
+    <table id="stakeholders">
+      <tr>
+        <th>Address</th>
+        <th>Num Shares</th>
+      </tr>
+    </table>
+    <br>
+    <button id="add_media_button">AddMedia</button>
+   </div>
+
+  <span id="status"></span>
+  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+</body>
+</html>
